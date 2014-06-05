@@ -1,0 +1,25 @@
+slides > slide {
+  width: 1024px;
+  height: 768px;
+  margin-left: -600px;
+  margin-top: -450px;
+}
+
+slides.layout-widescreen > slide,
+slides.layout-faux-widescreen > slide {
+  margin-left: -525px;
+  width: 1024px;
+}
+
+em {
+  font-style: italic;
+  color: #177f7f;
+}
+
+strong {
+  font-weight: bold;
+}
+
+code {
+  font-family: monospace;
+}

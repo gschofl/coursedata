@@ -1,0 +1,25 @@
+Package: coursedata
+Title: Data supporting Introductory and Statistical Data Analysis with R.
+Description: This package contains data sets and helper functions used for R
+    data analysis courses offered in 2014.
+Version: 0.0.1
+Authors@R: "Gerhard Schöfl <gerhard.schofl@@gmail.com> [aut, cre]"
+Depends:
+    R (>= 3.0.2)
+License: MIT + file LICENSE
+Suggests:
+    rmisc
+LazyData: true
+Type: Package
+Maintainer: Gerhard Schöfl <gerhard.schofl@gmail.com>
+Encoding: UTF-8
+lazyload: yes
+Collate:
+    'coursedata-package.r'
+    'data.r'
+    'utils.r'
+    'deck-to-chunk.r'
+    'helpers.r'
+    'initialise-vignette.r'
+    'initialise-deck.r'
+    'load-deck.r'

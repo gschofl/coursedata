@@ -1,0 +1,54 @@
+---
+title       : @title@
+subtitle    : @subtitle@
+author      : @author@
+job         : @job@
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      #
+widgets     : [mathjax]     # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+```{r setup, include=FALSE, cache=FALSE}
+# required libraries go here
+@required@
+
+# set global chunk options
+opts_chunk$set(fig.path = 'assets/img/', cache.path = 'assets/cache/', cache = TRUE)
+
+# the default output hook
+hook_output <- knit_hooks$get('output')
+knit_hooks$set(output = function(x, options) {
+  if (!is.null(n <- options$out.lines)) {
+    x <- unlist(strsplit(x, '\n'))
+    if (length(x) > n) {
+      # truncate the output
+      x <- c(head(x, n), '....\n')
+    }
+    x <- paste(x, collapse = '\n') # paste first n lines together
+  }
+  hook_output(x, options)
+})
+
+# Merge the source and output blocks in markdown output.
+# first ``` are the end of previous source block; second ``` are the beginning
+# of next output block
+knit_hooks$set(chunk = function(x, options) {
+   gsub('```\n+```r?', '', x)
+})
+
+set_width <- function(x) {
+    old_width <- options(width = x)
+    invisible(old_width)
+}
+
+opts_knit$set(out.format = 'markdown')
+opts_chunk$set(comment=' ## ')
+```
+
+@slides@
+
+
+
+

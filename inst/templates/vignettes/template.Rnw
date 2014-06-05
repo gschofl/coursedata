@@ -1,0 +1,56 @@
+%\VignetteIndexEntry{@shorttitle@}
+%\VignettePackage{@package@}
+
+\documentclass[letterpaper]{report}
+
+<<style, eval=TRUE, echo=FALSE, results='asis'>>=
+BiocStyle::latex(width = 90, fig.path = "figures/")
+opts_chunk$set(fig.width = 6, fig.height = 6, fig.keep = 'all')
+## require packages here
+
+@
+\usepackage{BioconductorVignette}
+\usepackage[utf8]{inputenc}
+\graphicspath{{figures/}}
+\setcounter{tocdepth}{1}
+%%%% CUSTOMISE HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{@title@}
+\author{@author@ \\
+        @address@ \\
+        \email{@email@}
+}
+
+\begin{document}
+
+\maketitle
+
+\date{\today}
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+Put an introduction here
+
+
+\section{A Simple Figure}
+<<figureexample, fig.show='hide', fig.width=4.2, fig.height=4.6>>=
+v <- seq(0, 60i, length.out = 1000)
+plot(abs(v)*exp(v), type = 'l', col = "Royalblue")
+@
+\incfig{figures/figureexample}{0.25\textwidth}{A curve}
+{The code that creates this figure is shown in the code chunk.}
+
+
+\section{Session Info}
+All of the output in this vignette was produced under the following
+conditions:
+<<sessinfo>>=
+sessionInfo()
+warnings()
+@
+
+\end{document}
