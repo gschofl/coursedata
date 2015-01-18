@@ -8,10 +8,10 @@
 #' refers to the number of observations in a particular case, e.g. 38 animals
 #' weighed between 100 and 110 grams and produced 5 offspring.
 #'
-#' @references Pearson 1910
-#' @docType data
-#' @keywords dataset
+#' @source Pearson 1910
 #' @format A data frame with 15 rows and 12 columns
+#' @examples
+#'   fertility
 "fertility"
 
 #' Dax30
@@ -19,20 +19,19 @@
 #' A dataset containing the DAX 30 stock quotes between 27. Feb. 2013 and
 #' 26. Feb. 2014.
 #'
-#' @format A data frame with 7818 rows and 8 columns
-#'   \describe{
-#'     \item{\code{symbol}}{A factor representing the date for each quote}
-#'     \item{\code{Date}}{Date on which the quote was taken}
-#'     \item{\code{Open}}{A numeric vector representing the opening price for each stock on each day}
-#'     \item{\code{High}}{A numeric vector representing the high price for each stock on each day}
-#'     \item{\code{Low}}{A numeric vector representing the low price for each stock on each day}
-#'     \item{\code{Close}}{A numeric vector representing the closing price for each stock on each day}
-#'     \item{\code{Volume}}{A numeric vector representing the number of shares traded for each stock on each day}
-#'      \item{\code{Adj.Close}}{A numeric vector representing the closing price for each stock on each day}
-#'   }
 #' @source \url{http://de.finance.yahoo.com/}
-#' @docType data
-#' @keywords dataset
+#' @format A data frame with 7818 rows and 8 columns
+#' \describe{
+#'  \item{symbol}{A factor representing the date for each quote}
+#'  \item{Date}{Date on which the quote was taken}
+#'  \item{Open}{A numeric vector representing the opening price for each stock on each day}
+#'  \item{High}{A numeric vector representing the high price for each stock on each day}
+#'  \item{Low}{A numeric vector representing the low price for each stock on each day}
+#'  \item{Close}{A numeric vector representing the closing price for each stock on each day}
+#'  \item{Volume}{A numeric vector representing the number of shares traded for each stock on each day}
+#'  \item{Adj.Close}{A numeric vector representing the closing price for each stock on each day}
+#' }
+#'
 "dax30"
 
 #' Births in the US in 2012
@@ -41,26 +40,25 @@
 #' 2012. There is one record per birth. This data set is a random twenty-five percent
 #' sample of the original data set.
 #'
-#' @format A data frame with 990199 rows and 12 columns
-#'   \describe{
-#'     \item{\code{DOB_MM}}{Month of date of birth}
-#'     \item{\code{DOB_WK}}{Day of week of birth}
-#'     \item{\code{MAGER}}{Mother's age}
-#'     \item{\code{TBO_REC}}{Total birth order}
-#'     \item{\code{WTGAIN}}{Weight gain by mother [pounds]}
-#'     \item{\code{SEX}}{a factor with levels \code{F} \code{M}, representing the sex of the child}
-#'     \item{\code{APGAR5}}{APGAR score}
-#'     \item{\code{UPREVIS}}{Number of prenatal visits}
-#'     \item{\code{ESTGEST}}{Estimated weeks of gestation}
-#'     \item{\code{DMETH_REC}}{Delivery Method; levels \code{spontaneous},
-#'     \code{cesarean}, \code{unknown}}
-#'     \item{\code{DPLURAL}}{"Plural Births"; levels \code{single}, \code{twin},
-#'     \code{triplet}, \code{quadruplet}, and \code{quintuplet or higher}}
-#'     \item{\code{DBWT}}{Birth weight [grams]}
-#'   }
 #' @source \url{http://www.cdc.gov/nchs/data_access/Vitalstatsonline.htm}
-#' @docType data
-#' @keywords dataset
+#' @format A data frame with 990199 rows and 12 columns
+#' \describe{
+#'  \item{DOB_MM}{Month of date of birth}
+#'  \item{DOB_WK}{Day of week of birth}
+#'  \item{MAGER}{Mother's age}
+#'  \item{TBO_REC}{Total birth order}
+#'  \item{WTGAIN}{Weight gain by mother [pounds]}
+#'  \item{SEX}{a factor with levels \code{F} \code{M}, representing the sex of the child}
+#'  \item{APGAR5}{APGAR score}
+#'  \item{UPREVIS}{Number of prenatal visits}
+#'  \item{ESTGEST}{Estimated weeks of gestation}
+#'  \item{DMETH_REC}{Delivery Method; levels \code{spontaneous}, \code{cesarean},
+#'    \code{unknown}}
+#'  \item{DPLURAL}{"Plural Births"; levels \code{single}, \code{twin}, \code{triplet},
+#'    \code{quadruplet}, and \code{quintuplet or higher}}
+#'  \item{DBWT}{Birth weight [grams]}
+#' }
+#'
 "birth2012us"
 
 #' \emph{Spodoptera frugiperda} mating trials
@@ -73,6 +71,7 @@
 #' an experiment where the reproductive timing of 320 fall armyworm mating
 #' pairs was observed for three consecutive nights.
 #'
+#'  @source \url{http://onlinelibrary.wiley.com/doi/10.1111/j.1420-9101.2009.01759.x/abstract}
 #' @format A data frame with 3129 rows and 18 columns
 #'   \describe{
 #'     \item{\code{Cross}}{Type of cross (Backcross, F1, or Parental)}
@@ -95,9 +94,7 @@
 #'     \item{\code{StartOvi}}{Start of oviposition [hours into scotophase]}
 #'     \item{\code{StartMcal}}{Start of male calling [hours into scotophase]}
 #'   }
-#' @source \url{http://onlinelibrary.wiley.com/doi/10.1111/j.1420-9101.2009.01759.x/abstract}
-#' @docType data
-#' @keywords dataset
+#'
 "spodoptera"
 
 #' headache
@@ -106,17 +103,15 @@
 #' of female and male patients
 #'
 #' @format A data frame with 30 rows and 6 columns:
-#'   \describe{
-#'     \item{\code{subjects}}{index number.}
-#'     \item{\code{sex}}{Sex of the subjects; factor levels \code{F}, \code{M}}
-#'     \item{\code{condition}}{Treatment received by the subject; factor levels
-#'     \code{placebo}, \code{aspirin}}
-#'     \item{\code{before}}{Headache intensity before treatment.}
-#'     \item{\code{after}}{Headache intensity after treatment.}
-#'     \item{\code{change}}{Change in headache intensity.}
-#'   }
-#' @docType data
-#' @keywords dataset
+#' \describe{
+#'  \item{\code{subjects}}{index number.}
+#'  \item{\code{sex}}{Sex of the subjects; factor levels \code{F}, \code{M}}
+#'  \item{\code{condition}}{Treatment received by the subject; factor levels
+#'    \code{placebo}, \code{aspirin}}
+#'  \item{\code{before}}{Headache intensity before treatment.}
+#'  \item{\code{after}}{Headache intensity after treatment.}
+#'  \item{\code{change}}{Change in headache intensity.}
+#' }
 "headache"
 
 #' Savings rates in 50 countries
@@ -127,19 +122,17 @@
 #' Also appears as \code{LifeCycleSavings} in the \code{datasets} package,
 #' and as \code{savings} in the \code{faraway} package.
 #'
-#' @format A data frame with 50 rows and 5 columns:
-#' \describe{
-#' \item{\code{sr}}{savings rate - personal saving divided by disposable
-#' income}
-#' \item{\code{pop15}}{percent population under age of 15}
-#' \item{\code{pop75}}{percent population over age of 75}
-#' \item{\code{dpi}}{per-capita disposable income in dollars}
-#' \item{\code{ddpi}}{percent growth rate of dpi}
-#' }
 #' @source Belsley, D., Kuh. E. and Welsch, R. (1980) "Regression Diagnostics"
 #' Wiley.
-#' @docType data
-#' @keywords dataset
+#' @format A data frame with 50 rows and 5 columns:
+#' \describe{
+#'  \item{\code{sr}}{savings rate - personal saving divided by disposable income}
+#'  \item{\code{pop15}}{percent population under age of 15}
+#'  \item{\code{pop75}}{percent population over age of 75}
+#'  \item{\code{dpi}}{per-capita disposable income in dollars}
+#'  \item{\code{ddpi}}{percent growth rate of dpi}
+#' }
+#'
 "savings"
 
 #' Pearson-Lee data
@@ -151,17 +144,18 @@
 #' than 65.  Data were given in the source as a frequency table to the nearest
 #' inch. Rounding error has been added to remove discreteness from graph.
 #'
+#' @references Weisberg, S. (2005). \emph{Applied Linear Regression}, 3rd
+#'   edition. New York: Wiley, Section 1.1.
+#' @source K. Pearson and A. Lee (1903), On the laws of inheritance in man,
+#'   \emph{Biometrika}, 2, 357--463, Table 31.
 #' @format A data frame with 1375 rows and 2 columns:
 #' \describe{
 #'   \item{Mheight}{ Mother's ht, in.  }
 #'   \item{Dheight}{ Daughter's ht, in.  }
 #' }
-#' @references Weisberg, S. (2005). \emph{Applied Linear Regression}, 3rd
-#' edition. New York: Wiley, Section 1.1.
-#' @source K. Pearson and A. Lee (1903), On the laws of inheritance in man,
-#' \emph{Biometrika}, 2, 357--463, Table 31.
-#' @docType data
-#' @keywords datasets
+#'
+#' @examples
+#' heights
 "heights"
 
 #' New York Times ads
@@ -170,6 +164,7 @@
 #' clicks recorded on the New York Times home page in May 2012. Each
 #' row represents a single user.
 #'
+#' @source \url{https://github.com/oreillymedia/doing_data_science}
 #' @format A data frame with 458441 rows and 5 columns:
 #' \describe{
 #'   \item{\code{Age}}{ Age of user. }
@@ -179,9 +174,7 @@
 #'   \item{\code{Clicks}}{ The number of times an ad has been clicked at. }
 #'   \item{\code{Signed_In}}{ Has the user been signed in (0=no, 1=yes). }
 #' }
-#' @source \url{https://github.com/oreillymedia/doing_data_science}
-#' @docType data
-#' @keywords dataset
+#'
 "nyt"
 
 #' Study of teenage gambling in Britain
@@ -189,6 +182,7 @@
 #' The \code{teengamb} data frame contains survey data from a study
 #' conducted to study teenage gambling in Britain.
 #'
+#' @source Ide-Smith & Lea, 1988, Journal of Gambling Behavior, 4, 110-118
 #' @format A data frame with 47 rows and 5 columns:
 #' \describe{
 #'   \item{\code{sex}}{ 0=male, 1=female. }
@@ -197,9 +191,7 @@
 #'   \item{\code{verbal}}{ Verbal score in words out of 12 correctly defined. }
 #'   \item{\code{gamble}}{ Expenditure on gambling in pounds per year. }
 #' }
-#' @source Ide-Smith & Lea, 1988, Journal of Gambling Behavior, 4, 110-118
-#' @docType data
-#' @keywords dataset
+#'
 "teengamb"
 
 #' Weekly wages of US male workers in 1988
@@ -224,8 +216,6 @@
 #' }
 #' @source Bierens, H.J., and D. Ginther (2001): "Integrated Conditional Moment
 #' Testing of Quantile Regression Models", Empirical Economics 26, 307-324
-#' @docType data
-#' @keywords dataset
 "uswages"
 
 #' Mid-Atlantic Wage Data
@@ -262,8 +252,6 @@
 #' (www.openbi.com), from the March 2011 Supplement to Current Population
 #' Survey data.
 #' \url{http://thedataweb.rm.census.gov/TheDataWeb}
-#' @docType data
-#' @keywords datasets
 #' @examples
 #' summary(Wage)
 "Wage"
@@ -286,8 +274,6 @@
 #' The National NeuroAIDS Tissue Consortium brain gene array: two types of
 #' HIV-associated neurocognitive impairment. PLoS One 2012;7(9):e46178.
 #' PMID: 23049970
-#' @docType data
-#' @keywords datasets
 #' @examples
 #' summary(hiv)
 "hiv"
@@ -316,6 +302,4 @@
 #'   }
 #' @source Pruscha H. (2006) Statistisches Methodenbuch. Springer Berlin.
 #' ISBN-13 978-3-540-26006-6
-#' @docType data
-#' @keywords dataset
 "primates"
